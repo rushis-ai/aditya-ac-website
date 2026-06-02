@@ -1,0 +1,150 @@
+/* ===========================
+   services.css — page styles
+   =========================== */
+
+/* PAGE HEADER */
+.page-header {
+  background: var(--navy);
+  padding: 130px 24px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.page-header-sub {
+  font-size: 17px;
+  color: var(--gray-400);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* SERVICE ROWS */
+.service-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 48px 0;
+}
+.service-row.reverse {
+  grid-template-columns: 1fr 100px;
+}
+.service-row.reverse .service-row-icon { order: 2; }
+.service-row.reverse .service-row-content { order: 1; }
+
+.service-row-icon {
+  font-size: 52px;
+  text-align: center;
+  padding-top: 8px;
+}
+.service-row-content h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+.service-row-content p {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 560px;
+}
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px 24px;
+  margin-bottom: 28px;
+}
+.service-list li {
+  font-size: 14px;
+  color: var(--gray-600);
+  padding: 4px 0;
+}
+
+.service-divider {
+  height: 1px;
+  background: var(--gray-100);
+}
+
+/* AMC PLANS */
+.amc-plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+.amc-card {
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 20px;
+  position: relative;
+}
+.amc-card h4 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.amc-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; margin-bottom: 12px; }
+.amc-tag {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* BRANDS */
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.brand-pill {
+  background: var(--white);
+  border: 1.5px solid var(--gray-100);
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: var(--font-display);
+  transition: border-color 0.2s, background 0.2s;
+}
+.brand-pill:hover {
+  border-color: var(--blue);
+  background: var(--ice);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .service-row, .service-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .service-row.reverse .service-row-icon,
+  .service-row.reverse .service-row-content { order: unset; }
+  .service-row-icon { font-size: 40px; text-align: left; }
+  .amc-plans { grid-template-columns: 1fr; }
+}
