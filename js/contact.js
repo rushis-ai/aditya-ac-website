@@ -1,4 +1,4 @@
-const SHEET_URL = 'hhttps://script.google.com/macros/s/AKfycbzh37OJ9BJKaw13KQC0SomtDhtdf8wsTFdpSFyLWImqIedMn9t1AkPkIOIi5Nyj6d8S/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzh37OJ9BJKaw13KQC0SomtDhtdf8wsTFdpSFyLWImqIedMn9t1AkPkIOIi5Nyj6d8S/exec';
 
 const form = document.getElementById('contactForm');
 const success = document.getElementById('formSuccess');
