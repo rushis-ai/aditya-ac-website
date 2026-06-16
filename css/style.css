@@ -284,6 +284,58 @@ img { max-width: 100%; display: block; }
   animation: fadeUp 0.8s 0.2s ease both;
 }
 
+.hero-img-wrap {
+  position: relative;
+  width: 420px;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+}
+
+.hero-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+.hero-img-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-lg);
+  min-width: 210px;
+}
+.hero-img-badge span {
+  font-size: 28px;
+}
+.hero-img-badge strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.hero-img-badge p {
+  font-size: 12px;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-img-wrap { width: 100%; }
+  .hero-img { height: 280px; }
+  .hero-img-badge { left: 12px; bottom: -16px; }
+}
+
 .ac-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
